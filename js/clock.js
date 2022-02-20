@@ -8,7 +8,7 @@ function makeTimeClock() {
 
   const year = nowDate.getFullYear();
   const month = viewPadding(nowDate.getMonth() + 1);
-  const day = viewPadding(nowDate.getDay());
+  const day = viewPadding(nowDate.getDate());
   const hour = viewPadding(nowDate.getHours());
   const minute = viewPadding(nowDate.getMinutes());
   const second = viewPadding(nowDate.getSeconds());

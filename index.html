@@ -28,29 +28,46 @@
             <div>
                 <h3 class="float-md-start mb-0">Moment</h3>
                 <div class="justify-content-center float-md-end">
-                    <span class="form-check form-switch">
+                    <p id="loginedInfo" class="hidden mb-0 text-end">
+                      <em></em>
+                      <button type="button" class="btn btn-outline-danger btn-sm" id="logoutBtn">Logout</button>
+                      <span class="form-check form-switch" style="display:none">
                         <input class="form-check-input" type="checkbox" role="switch" id="swichBGImageCheck" checked>
                         <label class="form-check-label" for="swichBGImageCheck">Change BackGround Image</label>
-                    </span>
+                      </span>
+                    </p>
+                    <div id="weather"></div>
                 </div>
             </div>
         </header>
         
         <main class="px-3">
-            <h1 id="clockTime"></h1>
-            <div class="input-group mb-3">
-                <input type="text" class="w-75 form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary fw-bold border-white" type="button" id="button-addon2">Add Todo</button>
-            </div>
-            <p class="lead mt-10">
-             <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn more</a>
-            </p>
-        </main>
+            <h1 id="clockTime" class="clock"></h1>
+            <section id="logined" class="hidden">
+              <form id="todoForm" method="post">
+                <div class="input-group mb-3">
+                    <input type="text" id="" class="form-control text-muted" placeholder="Please enter what you want to do today." aria-label="Please enter what you want to do today." aria-describedby="addTodoBtn" required value="">
+                    <button class="btn btn-outline-secondary fw-bold border-white" type="submit" id="addTodoBtn">Add Todo</button>
+                </div>
+                <ul class="list-group text-start" id="todoListUl" ></ul>
+              </form>
+            </section>
+            <section id="nonLogin" class="hidden">
+              <form class="form-floating" id="loginForm" method="post">
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" id="login_email" placeholder="name@example.com" required value="">
+                  <label for="login_email" class="text-muted">Input Your Email address</label>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-lg btn-secondary fw-bold border-white bg-white" id="loginBtn">&gt; Login</button>
+                </div>
+              </form>
+            </section>
         </main>
 
         <footer class="mt-auto text-white-50">
-            <p class="lead"><em>Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</em></p>
-            <p><em>aaa</em></p>
+            <p class="lead"><em>Success doesn't come overnight.</em></p>
+            <p><em>성공은 하룻밤 사이에 오지 않는다.</em></p>
         </footer>
     </div>
 
@@ -59,6 +76,8 @@
     <script src="js/main.js"></script>
     <script src="js/background.js"></script>
     <script src="js/clock.js"></script>
+    <script src="js/todos.js"></script>
+    <script src="js/weather.js"></script>
 
     <!-- Bootstrap Js-->
     <script
