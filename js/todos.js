@@ -31,7 +31,7 @@ function changeComplet(e) {
   const todoInfo = TODO_DATA.find(
     (todo) => String(todo.id) === e.target.parentElement.id
   );
-  todoInfo["isCompleted"] = true;
+  todoInfo["isCompleted"] = e.target.checked;
   setStorage(LOGINED_DATA.email, TODO_DATA);
 }
 
