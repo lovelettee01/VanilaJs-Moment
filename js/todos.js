@@ -82,5 +82,5 @@ todoForm.addEventListener("submit", (e) => {
 
 // Page Onload Event!
 window.addEventListener("load", () => {
-  loadTodoList();
+  //loadTodoList();
 });
